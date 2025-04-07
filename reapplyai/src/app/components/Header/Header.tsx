@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 
 import "./header.css";
 
@@ -9,9 +9,9 @@ export default function Header() {
             <div>
                 <h1>ReapplyAI</h1>
                 <ul>
-                    <li>Home</li>
-                    <li>Resumes</li>
-                    <li>Templates</li>
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/resumes">Resumes</Link></li>
+                    <li><Link href="/templates">Templates</Link></li>
                 </ul>
             </div>
         </header>
