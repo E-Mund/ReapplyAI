@@ -1,5 +1,17 @@
 .header {
     margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.title {
+    grid-column: 2 / 3;
+}
+
+.login {
+    grid-column-start: 3;
+    justify-self: end;
+    margin-right: 3%;
 }
 
 h1 {
