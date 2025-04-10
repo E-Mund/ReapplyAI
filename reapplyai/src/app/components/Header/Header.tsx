@@ -11,7 +11,7 @@ export default function Header() {
     return (
         <header className="header">
             <div className="title">
-                <h1>ReapplyAI</h1>
+                <Image src="/title.svg" alt="title" width="200" height="150" className="image"/>
                 <ul>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/resumes">Resumes</Link></li>
