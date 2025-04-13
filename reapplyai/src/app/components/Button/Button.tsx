@@ -9,6 +9,8 @@ interface buttonProps {
 
 export default function Button(props: buttonProps) {
     return (
-        <button className="button" onClick={props.onClick}>{props.name}</button>
+        <button className="button" onClick={props.onClick}>
+            {props.name}
+        </button>
     );
 }

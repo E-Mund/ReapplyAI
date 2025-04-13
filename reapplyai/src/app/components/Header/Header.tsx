@@ -19,7 +19,10 @@ export default function Header() {
                 </ul>
             </div>
             <div className="login">
-                <Button name="Login | Signup" onClick={() => console.log("Clicked!")}/>
+                {/* Changed from <Button> to <Link> */}
+                <Link href='/login' className='button'>
+                Login | Signup
+                </Link>
             </div>
         </header>
     );
