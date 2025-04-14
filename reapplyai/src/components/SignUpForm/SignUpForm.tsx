@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import "./signupForm.css";
+import Button from "../Button/Button";
+
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("");
@@ -16,13 +19,7 @@ const SignUpForm = () => {
     }
 
     return (
-        <div style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 9999,
-        }}>
+        <div className= "wholeForm">
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="email">Email</label>
@@ -32,14 +29,7 @@ const SignUpForm = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        style={{
-                            padding: "8px",
-                            margin: "8px 0",
-                            border: "1px solid #ccc",
-                            borderRadius: "4px",
-                            backgroundColor: "#f9f9f9",
-                            width: "100%",
-                        }}
+                        className = "input-elements"
                     />
                 </div>
                 <div>
@@ -50,31 +40,19 @@ const SignUpForm = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        style={{
-                            padding: "8px",
-                            margin: "8px 0",
-                            border: "1px solid #ccc",
-                            borderRadius: "4px",
-                            backgroundColor: "#f9f9f9",
-                            width: "100%",
-                        }}
+                       className = "input-elements"                       
                     />
                 </div>
-                <button
+                <Button name = "Create account" onClick={() => console.log("Form Submitted")
+                  /*  
+                    <button
                     type="submit"
-                    style={{
-                        padding: "10px 16px",
-                        backgroundColor: "#1a73e8",
-                        color: "#fff",
-                        border: "none",
-                        borderRadius: "4px",
-                        cursor: "pointer",
-                        marginTop: "12px",
-                        width: "100%"
-                    }}
+                    className="submitButton"
                 >
                     Create Account
                 </button>
+                */
+                } />
             </form>
         </div>
     );
