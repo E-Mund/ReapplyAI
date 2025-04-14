@@ -32,7 +32,7 @@ export default function Resume({ resume }: ResumeProps) {
         href="/edit"
         className="mt-3 self-center bg-blue-200 hover:bg-blue-400 hover:text-white text-sm px-3 py-1 rounded transition"
       >
-        edit
+        Edit Resume
       </a>
     </div>
   );
