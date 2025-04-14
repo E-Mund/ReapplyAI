@@ -1,6 +1,5 @@
 interface sectionProps {
-    sectionName: string;
-    sectionInput: string;
+    key: number;
 };
 
 export default function Section(props: sectionProps) {

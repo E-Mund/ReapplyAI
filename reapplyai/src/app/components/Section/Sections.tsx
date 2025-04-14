@@ -5,7 +5,7 @@ import Section from "./Section";
 
 import "./section.css";
 
-const init = [<Section key="1"/>];
+const init = [<Section key={1}/>];
 
 export default function Sections() {
     const [key, setKey] = useState(2);
@@ -23,7 +23,7 @@ export default function Sections() {
                     {sections}
                 </form>
             </div>
-          <Button name="Add Section" onClick={addSection}/>
+          <Button name="+Add Section" onClick={addSection}/>
         </div>
     );
 }
