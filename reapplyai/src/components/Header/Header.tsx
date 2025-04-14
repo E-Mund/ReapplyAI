@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "../Button/Button";
+import Button from "@/components/Button/Button";
 
 import "./header.css";
 

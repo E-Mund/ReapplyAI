@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
 
-import Button from "./components/Button/Button";
-import Sections from "./components/Section/Sections";
+import Button from "../components/Button/Button";
+import Sections from "../components/Section/Sections";
 
 export default function Home() {
   return (
