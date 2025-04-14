@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +19,12 @@ export default function Header() {
             setButtonName("Login | Signup");
         }
         setIsLoggedIn(!isLoggedIn);
+        localStorage.setItem("isLoggedIn", isLoggedIn.toString());
     }
+
+    useEffect(() => {
+        localStorage.setItem("isLoggedIn", isLoggedIn.toString());
+      });
 
     return (
         <header className="header">
