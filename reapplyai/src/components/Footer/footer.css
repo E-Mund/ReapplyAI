@@ -2,3 +2,7 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+div {
+    margin: 5px;
+}
