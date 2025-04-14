@@ -19,7 +19,7 @@ const SignUpForm = () => {
     }
 
     return (
-        <div className= "wholeForm bg-gradient-to-b from-blue-500 to-blue-300 text-white py-20 px-6 text-center border-4 border-white shadow-2xl rounded-xl">
+        <div className= "w-100 bg-gradient-to-b from-blue-500 to-blue-300 text-white py-17 px-6 text-center border-4 border-white shadow-2xl rounded-xl">
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="email">Email</label>
