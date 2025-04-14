@@ -1,15 +1,14 @@
 "use client"
-import Image from "next/image";
 
-import Button from "@/components/Button/Button";
-import Sections from "@/components/Section/Sections";
+import Welcome from "@/components/Splash/Welcome";
+import Features from "@/components/Splash/Features";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        
-      </main>
+    <div className="min-h-screen bg-white text-gray-900">
+      <Welcome/>
+      <Features/>
     </div>
   );
 }
