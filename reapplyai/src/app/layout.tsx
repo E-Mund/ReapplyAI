@@ -34,6 +34,9 @@ export default function RootLayout({
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          /*
+          overflow: "hidden"
+          */
         }}
       >
         <Header/>
