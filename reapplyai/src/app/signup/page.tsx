@@ -1,12 +1,7 @@
 "use client"
 import Image from "next/image";
-<<<<<<< HEAD
-
-import Button from "../../components/Button/Button";
-=======
-import Button from "../components/Button/Button";
-import SignUpForm from "../components/SignUpForm/SignUpForm";
->>>>>>> 8ddce21 (changes commit)
+import Button from "@/components/Button/Button";
+import SignUpForm from "@/components/SignUpForm/SignUpForm";
 
 export default function Home() {
   return (
