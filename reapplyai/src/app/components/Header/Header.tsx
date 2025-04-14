@@ -1,6 +1,7 @@
 'use client'
-import Image from "next/image";
 
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 import Button from "../Button/Button";
@@ -8,6 +9,18 @@ import Button from "../Button/Button";
 import "./header.css";
 
 export default function Header() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [buttonName, setButtonName] = useState("Login | Signup");
+    
+    function login_out() {
+        if (isLoggedIn == true) {
+            setButtonName("Logout");
+        } else {
+            setButtonName("Login | Signup");
+        }
+        setIsLoggedIn(!isLoggedIn);
+    }
+
     return (
         <header className="header">
             <div className="title">
