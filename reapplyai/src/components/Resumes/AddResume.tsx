@@ -2,7 +2,6 @@
 
 import ClipArt from "@/assets/resume-clip-art.png";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { ResumeProps } from "./Resume";
 
