@@ -31,6 +31,7 @@ const LoginForm = () => {
         setEmail('');
         setPassword('');
         console.log("Form was submitted");
+        console.log("isLoggedIn changing from " + isLoggedIn + " to " + !isLoggedIn);
         if (email == EXAMPLE_USER.email && password == EXAMPLE_USER.password) {
             console.log("USER FOUND");
             setIsLoggedIn(!isLoggedIn);

@@ -32,10 +32,21 @@ export default function Header() {
                 </ul>
             </div>
             <div className="login">
-                {/* Changed from <Button> to <Link> */}
-                <Link href='/login' className='button'>
-                Login | Signup
-                </Link>
+                {/* Link or Button? */}
+                <button onClick={login_out} className='button'>
+                {/* User is logged out */}
+                { 
+                    !isLoggedIn && (
+                        <span>Login | Signup</span>
+                    )
+                }
+                {/* User is logged in */}
+                { 
+                    isLoggedIn && (
+                        <span>Logout</span>
+                    )
+                }
+                </button>
             </div>
         </header>
     );
