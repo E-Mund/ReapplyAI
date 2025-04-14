@@ -1,13 +1,13 @@
 "use client"
-import Image from "next/image";
 
-import Button from "@/components/Button/Button";
-import Sections from "@/components/Section/Sections";
+import AddResume from "@/components/Resumes/AddResume";
+import DisplayResume from "@/components/Resumes/DisplayResumes";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Resumes Page</h1>
+    <div className="flex flex-col items-center justify-center">
+      <AddResume/>
+      <DisplayResume/>
     </div>
   );
 }
