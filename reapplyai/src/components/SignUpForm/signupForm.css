@@ -14,15 +14,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.submitButton {
+.submitButton {    
+  /*
     padding: 10px 16px;
     background-color: #1a73e8;
     color: white;
+    background-color: white;
+    color: #2563eb;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     margin-top: 12px;
     width: 100%
-
+    */
 }
