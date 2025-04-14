@@ -1,0 +1,29 @@
+.section {
+    padding: 3px;
+    margin: 14px;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #5EB1FF;
+    color: white;
+    height: 175px;
+    width: 400px;
+    border: solid 2px white;
+    box-shadow: 5px 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    padding: 4px;
+    margin: 2px;
+}
+
+input {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 2px;
+}

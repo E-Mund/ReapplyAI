@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-import Button from "@/components/Button/Button";
+import Button from "../Button/Button";
 import Section from "./Section";
 
-import "./section.css";
+import "./section.css"
 
-const init = [<Section key={1}/>];
+const init = [<Section key={1}/>, <Section key={2}/>, <Section key={3}/>];
 
 export default function Sections() {
-    const [key, setKey] = useState(2);
+    const [key, setKey] = useState(4);
     const [sections, setSections] = useState(init);
     
     function addSection() {
@@ -23,7 +23,10 @@ export default function Sections() {
                     {sections}
                 </form>
             </div>
-          <Button name="+Add Section" onClick={addSection}/>
+            <div className="buttons">
+              <Button name="+Add Section" onClick={addSection}/>
+              <Button name="Submit" onClick={() => console.log("Submitted!")}/>
+            </div>
         </div>
     );
 }
