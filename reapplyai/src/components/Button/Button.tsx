@@ -4,7 +4,7 @@ import "./button.css"
 
 interface buttonProps {
     name: string;
-    type: "submit" | "reset" | "button";
+    type?: "submit" | "reset" | "button";
     onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
