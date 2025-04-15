@@ -37,7 +37,6 @@ export default function Header() {
                 <ul>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/resumes">Resumes</Link></li>
-                    <li><Link href="/templates">Templates</Link></li>
                 </ul>
             </div>
             <div className="login">
