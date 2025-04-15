@@ -4,6 +4,9 @@ import AddResume from "@/components/Resumes/AddResume";
 import DisplayResumes from "@/components/Resumes/DisplayResumes";
 import { ResumeProps } from "@/components/Resumes/Resume";
 import { useState, useEffect } from "react";
+import "../../components/Login/loginForm.css"
+import Link from "next/link";
+
 
 const RESUMES_INIT: ResumeProps["resume"][]= [
   {
@@ -44,6 +47,14 @@ export default function Home() {
 
   return (
     <>
+      {!isLoggedIn && (
+        <div className="input-elements">
+        <ul>
+            <li><Link href="/">Log in to view this page!</Link></li>
+        </ul>
+    </div>
+      )}
+
       {isLoggedIn && (
         <div className="flex flex-col items-center justify-center">
           <AddResume onAddItem={handleAddItem}/>
