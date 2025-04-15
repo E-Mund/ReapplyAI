@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from 'next/navigation'
 
 import Button from "@/components/Button/Button";
 
@@ -13,10 +14,13 @@ export default function Header() {
     const [buttonName, setButtonName] = useState("Login | Signup");
     
     function login_out() {
+        setIsLoggedIn(!isLoggedIn);
         if (isLoggedIn == true) {
             setButtonName("Logout");
+            redirect(`/login`); 
         } else {
-            setButtonName("Login | Signup");
+            setButtonName("Login");
+            redirect(`/`);
         }
         setIsLoggedIn(!isLoggedIn);
         localStorage.setItem("isLoggedIn", isLoggedIn.toString());

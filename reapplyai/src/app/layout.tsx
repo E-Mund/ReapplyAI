@@ -29,15 +29,6 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
-        style={{
-          backgroundImage: `url("/background.svg")`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          /*
-          overflow: "hidden"
-          */
-        }}
       >
         <Header/>
         {children}
