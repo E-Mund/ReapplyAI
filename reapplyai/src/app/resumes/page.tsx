@@ -3,7 +3,7 @@
 import AddResume from "@/components/Resumes/AddResume";
 import DisplayResumes from "@/components/Resumes/DisplayResumes";
 import { ResumeProps } from "@/components/Resumes/Resume";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const RESUMES_INIT: ResumeProps["resume"][]= [
   {
@@ -27,6 +27,15 @@ const RESUMES_INIT: ResumeProps["resume"][]= [
 ]
 
 export default function Home() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const storedLoginState = localStorage.getItem("isLoggedIn");
+    if (storedLoginState === "true") {  
+     setIsLoggedIn(true);
+    }
+  });
+
   const [allResumes, setAllResumes] = useState(RESUMES_INIT);
 
   const handleAddItem = (newItem: ResumeProps["resume"]) => {
@@ -34,9 +43,13 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <AddResume onAddItem={handleAddItem}/>
-      <DisplayResumes resumes={allResumes}/>
-    </div>
+    <>
+      {isLoggedIn && (
+        <div className="flex flex-col items-center justify-center">
+          <AddResume onAddItem={handleAddItem}/>
+          <DisplayResumes resumes={allResumes}/>
+        </div>
+      )}
+    </>
   );
 }

@@ -1,11 +1,26 @@
 import React, { useState } from "react";
-import "./signupForm.css";
 import Button from "@/components/Button/Button";
+import "./loginForm.css"
 
+export interface LoginProps {
+    user: {
+        userId: number;
+        email: string;
+        password: string;
+    }
+}
 
-const SignUpForm = () => {
+const EXAMPLE_USER: LoginProps["user"] = {
+    userId: 1,
+    email: "test@email.com",
+    password: "password"
+    
+}
+
+const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -16,6 +31,12 @@ const SignUpForm = () => {
         setEmail('');
         setPassword('');
         console.log("Form was submitted");
+        console.log("isLoggedIn changing from " + isLoggedIn + " to " + !isLoggedIn);
+        if (email == EXAMPLE_USER.email && password == EXAMPLE_USER.password) {
+            console.log("USER FOUND");
+            setIsLoggedIn(!isLoggedIn);
+        }
+        console.log(isLoggedIn);
     }
 
     return (
@@ -43,16 +64,10 @@ const SignUpForm = () => {
                        className = "input-elements"                       
                     />
                 </div>
-                <Button name = "Create account" onClick={() => console.log("Form Submitted") }/>
+                <Button name = "Log In" onClick={() => console.log("Form Submitted") }/>
             </form>
         </div>
     );
 }
-/*
-<Button name = "Create account" onClick={() => console.log("Form Submitted") }/>
-<button type="submit" className="bg-white text-blue-600 px-[6px] py-[3px] rounded-full text-lg font-semibold shadow hover:bg-gray-100 transition">
-    Create Account
- </button> 
-*/
 
-export default SignUpForm;
+export default LoginForm;
