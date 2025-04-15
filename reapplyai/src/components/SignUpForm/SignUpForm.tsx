@@ -43,7 +43,7 @@ const SignUpForm = () => {
                        className = "input-elements"                       
                     />
                 </div>
-                <Button name = "Create account" onClick={() => console.log("Form Submitted") }/>
+                <Button name = "Create account" onClick={() => console.log("Form Submitted")} type = "submit"/>
             </form>
         </div>
     );
