@@ -7,7 +7,7 @@ const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!email || !password) {
             alert("Fill out all inputs");
@@ -16,6 +16,20 @@ const SignUpForm = () => {
         setEmail('');
         setPassword('');
         console.log("Form was submitted");
+
+        try {
+            const response = await fetch('/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({email,password}),
+            });
+            return await response.json();
+        } catch(er) {
+            console.error("Form submission error",er);
+            alert("Please try again, an unexpected error occured");
+        }
     }
 
     return (
