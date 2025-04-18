@@ -1,11 +1,14 @@
+"use client";
 import React, { useState } from "react";
 import "./signupForm.css";
 import Button from "@/components/Button/Button";
+import { useRouter } from "next/navigation";
 
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const rout = useRouter();
     
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -13,10 +16,12 @@ const SignUpForm = () => {
             alert("Fill out all inputs");
             return;
         }
+        /*
         setEmail('');
         setPassword('');
         console.log("Form was submitted");
-
+        */
+       
         try {
             const response = await fetch('/api/signup', {
                 method: 'POST',
@@ -25,7 +30,16 @@ const SignUpForm = () => {
                 },
                 body: JSON.stringify({email,password}),
             });
-            return await response.json();
+            if(!response.ok) {
+                throw new Error('Sign up Error');
+            }
+
+            setEmail('');
+            setPassword('');
+            console.log("Form was submitted");
+            await response.json();
+            rout.push("/login");
+
         } catch(er) {
             console.error("Form submission error",er);
             alert("Please try again, an unexpected error occured");
