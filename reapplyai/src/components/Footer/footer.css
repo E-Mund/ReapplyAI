@@ -1,8 +1,7 @@
 footer {
-    display: flex;
-    justify-content: center;
-}
-
-div {
-    margin: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 6px;
 }
